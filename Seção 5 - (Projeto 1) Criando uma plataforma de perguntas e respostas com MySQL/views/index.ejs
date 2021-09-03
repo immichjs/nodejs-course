@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/css/style.css">
+  <title>Ask Node</title>
+</head>
+
+<body>
+  <h1>Ask Node</h1>
+
+  <img src="/img/ocean.jpg" alt="">
+
+  <p>Nome: <%= name %></p>
+  <p>Linguagem: <%= lang %></p>
+  <p>Empresa: <%= company %></p>
+  <p>Salário: <%= salary %></p>
+
+  <% if (message) { %>
+    <h3>Isso é uma mensagem de erro!</h3>
+  <% } else { %>
+    <h3>Nenhum erro foi encontrado!</h3>
+  <% } %>
+
+  <ul>
+    <% products.forEach(e => { %>
+      <hr>
+      <li>
+        <h3>Nome do produto: <%= e.name %> </h3> 
+        <p>Preço: <strong>R$ <%= e.price %></strong></p>
+      </li>
+    <% }) %>
+  </ul>
+</body>
+
+</html>
