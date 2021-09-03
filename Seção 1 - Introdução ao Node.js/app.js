@@ -16,7 +16,6 @@ let resultSubtraction = subtraction(20, 40)
 
 console.log(sum(10, 20))
 console.log(division(10, 2))
-console.log(resultMultiplication)
 console.log(resultSubtraction)
 
 console.log(calculator.name)
