@@ -1,39 +1,24 @@
-<!DOCTYPE html>
-<html lang="pt-br">
-
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="/css/style.css">
-  <title>Ask Node</title>
-</head>
+<%- include('partials/head.ejs') %>
 
 <body>
-  <h1>Ask Node</h1>
+  <%- include('partials/navbar.ejs') %>
 
-  <img src="/img/ocean.jpg" alt="">
-
-  <p>Nome: <%= name %></p>
-  <p>Linguagem: <%= lang %></p>
-  <p>Empresa: <%= company %></p>
-  <p>Salário: <%= salary %></p>
-
-  <% if (message) { %>
-    <h3>Isso é uma mensagem de erro!</h3>
-  <% } else { %>
-    <h3>Nenhum erro foi encontrado!</h3>
-  <% } %>
-
-  <ul>
-    <% products.forEach(e => { %>
-      <hr>
-      <li>
-        <h3>Nome do produto: <%= e.name %> </h3> 
-        <p>Preço: <strong>R$ <%= e.price %></strong></p>
-      </li>
-    <% }) %>
-  </ul>
+  <div class="container">
+    <hr>
+    <h1>Perguntas</h1>
+    <hr>
+    <a href="/toask" class="btn btn-dark">Perguntar</a>
+    <hr>
+    <div class="card">
+      <% questions.forEach(question => { %>
+        <div class="card-body">
+          <h3><%= question.title %></h3>
+        </div>
+        <div class="card-footer">
+          <a href="/toask/<%= question.id %>"><button class="btn btn-dark">Responder</button></a>
+        </div>
+        <% }) %>
+      </div>
+    </div>
 </body>
-
-</html>
+<%- include('partials/scripts.ejs') %>

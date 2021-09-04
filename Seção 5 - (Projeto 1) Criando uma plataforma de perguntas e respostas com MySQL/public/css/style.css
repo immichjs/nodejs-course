@@ -1,15 +1,7 @@
-h1 {
-  color: lightblue;
-}
-
 body {
-  background-color: #0c0c0c;
+  background-color: #eceff1;
 }
 
-p {
-  color: #fff;
-}
-
-h3 {
-  color: #fff;
+#ask-form {
+  margin-top: 5vh;
 }
